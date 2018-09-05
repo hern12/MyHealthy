@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Calulate Bmi</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 style="text-align:center">Bmi Calculator</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" stacked>Weight (kg.)</ion-label>
+      <ion-input type="number" [(ngModel)]="weight" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Height (cm.)</ion-label>
+        <ion-input type="number"  [(ngModel)]="height" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+        <button ion-button secondary (click)="bmiCalculate()">Calculate</button>
+    </ion-item>
+    <ion-item class="result-wrapper" *ngIf="result" style="text-align:center;margin-bottom: 20px;">
+        <h1 style="margin:10px 0 20px 0">BMI: {{result}}</h1>
+        <h2 style="color:#74b9ff" *ngIf="result < 18.5">น้ำหนักต่ำกว่าเกณฑ์</h2>
+        <h2 style="color:#2ed573" *ngIf="result >= 18.5 && result <= 22.9">**สมส่วน**</h2>
+        <h2 style="color:#ffa502" *ngIf="result >= 23.0 && result <= 24.9">น้ำหนักเกิน!</h2>
+        <h2 style="color:#ff7f50" *ngIf="result >= 25.0 && result <= 29.9">โรคอ้วน!!</h2>
+        <h2 style="color:#ff6348" *ngIf="result >= 30">โรคอ้วนลดด่วน!!!</h2>
+    </ion-item>
+    <img src="http://www.bangpakokhospital.com/upload/P1701310041-FB-%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94-900x900-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%AD%E0%B9%89%E0%B8%A7%E0%B8%99%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B9%88%E0%B8%B2-!!!-2.JPG"/>
+  </ion-list>
+</ion-content>

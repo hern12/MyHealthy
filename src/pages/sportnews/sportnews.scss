@@ -1,0 +1,95 @@
+
+.object-fit_fill { object-fit: cover }
+
+page-sportnews {
+
+  ion-spinner {
+    width: 48px;
+    height: 48px;
+    stroke: #444;
+    fill: #222;
+    text-align: center;
+  }
+
+  .card{
+    border-radius: 10px;
+  }
+  .news-title{
+    margin-top: 10px !important;
+    font-weight: bold;
+  }
+  .news-description{
+    margin-bottom: 10px !important;
+  }
+  .news-title,.news-description{
+    margin-left: 10px;
+  }
+  .ion-flex{
+    display: flex;
+  }
+
+  .view-news{
+    background: #74b9ff;
+    width:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .link-style{
+    color:white;
+  }
+
+  .detail-block{
+    flex:1
+  }
+  img{
+    height: 100%;
+    width: 80px;
+  }
+
+}
+
+.object-fit_fill { object-fit: cover }
+
+page-sportnews {
+  .card{
+    border-radius: 10px;
+  }
+  .news-title{
+    margin-top: 10px !important;
+    font-weight: bold;
+  }
+  .news-description{
+    margin-bottom: 10px !important;
+  }
+  .news-title,.news-description{
+    margin-left: 10px;
+  }
+  .ion-flex{
+    display: flex;
+  }
+
+  .view-news{
+    background: #74b9ff;
+    width:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .link-style{
+    color:white;
+  }
+
+  .detail-block{
+    flex:1
+  }
+  img{
+    height: 100%;
+    width: 80px;
+  }
+
+}

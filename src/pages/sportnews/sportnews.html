@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sport news
+    </ion-title>
+    <ion-buttons>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!news" name="bubbles">
+      <ion-spinner></ion-spinner>
+  </div>
+  <div *ngFor="let item of news">
+    <ion-card *ngIf="item.urlToImage">
+       <div class="ion-flex">
+        <ion-thumbnail class="ion-tumb" item-start>
+            <img class="object-fit_fill" src="{{item.urlToImage}}">
+        </ion-thumbnail>
+        <div class="detail-block">
+          <h2 class="news-title">{{item.title}}</h2>
+          <p class="news-description">{{item.description}}</p>
+        </div>
+        <div class="view-news">
+          <a href="{{item.url}}" class="link-style">
+            <ion-icon name="eye">
+            </ion-icon>
+          </a>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
+
