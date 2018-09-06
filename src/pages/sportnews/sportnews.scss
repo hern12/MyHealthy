@@ -8,7 +8,9 @@ page-sportnews {
     height: 48px;
     stroke: #444;
     fill: #222;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .card{

@@ -14,7 +14,7 @@ export class LoadingComponent {
 
   text: string;
 
-  constructor(public loadingCtrl: LoadingController) {
+  constructor() {
     console.log('Hello LoadingComponent Component');
     this.text = 'Hello World';
   }

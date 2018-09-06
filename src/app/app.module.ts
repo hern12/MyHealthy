@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { SportnewsPage } from '../pages/sportnews/sportnews'
 import { CalbmiPage }  from '../pages/calbmi/calbmi'
 
@@ -15,26 +14,30 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SportNewsProvider } from '../providers/sportnews/sportnews';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//components
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     SportnewsPage,
-    CalbmiPage
+    CalbmiPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     SportnewsPage,
     CalbmiPage
   ],
@@ -43,6 +46,7 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SportNewsProvider
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}

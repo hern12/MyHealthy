@@ -26,9 +26,7 @@ export class SportNewsProvider {
       // We're using Angular HTTP provider to request the data,
       // then on the response, it'll map the JSON data to a parsed JS object.
       // Next, we process the data and resolve the promise with the new data.
-      const url = 'https://newsapi.org/v2/top-headlines?' +
-                  'country=us&' +
-                  'apiKey=eeb94dcc5ac245658f82eb900488eccf';
+      const url = 'https://newsapi.org/v2/everything?q=exercise&apiKey=eeb94dcc5ac245658f82eb900488eccf'
       this.http.get(url)
         .map(res => res)
         .subscribe(data => {
