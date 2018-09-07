@@ -1,4 +1,4 @@
-import { Component,OnInit  } from '@angular/core';
+import { Component, Input,OnInit  } from '@angular/core';
 import {
   trigger,
   state,
@@ -30,14 +30,14 @@ import {
   ]
 })
 export class CardbuttonComponent implements OnInit {
-
+  @Input() iconType: string;
   state = 'inactive';
 
   constructor() {
-
   }
 
-  ngOnInit () {}
+  ngOnInit(){
+  }
 
   toggleState() {
     this.state = 'active';
